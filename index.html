@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+   <div class="container">
+   <div class="row">
+     <div class="door1" style="height:400px; width:200px">
+       <img src="door.png" class="w-100" alt="">
+     </div>
+     <div class="door2" style="height:300px; width:150px">
+       <img src="door2.png" class="w-100" alt="">
+     </div>
+     <div class="door3" style="height:300px; width:150px">
+       <img src="door3.png" class="w-100" alt="">
+     </div>
+   </div>
+  </div>
+  <div class="t1" style="background-image: url(bg.jpg); height: 1000px; background-size: 100% 100%">
+    <h3 class="text-white">Жулик украл у Гарри его метлу, плащ и палочку! Помоги ему найти их!</h3>
+    <h1 id="time" class="text-success"><div id="points"></div> </h1>  
+    <button class="exit-1 bg-success" style="border:none">
+    	Выйти
+    </button>
+    
+    <div class="a1" style="margin-top:700px; margin-left:750px;position:absolute">
+      <img src="mantiya.png" height="50" width="50" alt="" style="transform: rotate(45deg)">
+    </div>
+    <div class="a2" style="margin-top:400px; margin-left:450px;position:absolute">
+      <img src="metla.png" height="50" width="50" alt="">
+    </div >
+    <div class="a3" style="margin-top:800px; margin-left:50px;position:absolute">
+      <img src="palochka.png" height="50" width="50" alt="">
+    </div>
+    <div class="a4" style="margin-top:600px; margin-left:600px;position:absolute">
+      <img src="ring.png" height="30" width="30" alt="">
+    </div>
+    <div class="a5" style="margin-top:800px; margin-left:1300px;position:absolute">
+      <img src="gun.png" height="50" width="50" alt="">
+    </div>
+  </div>
+  <div class="t2" style="background-image: url(bg.jpg); height: 1000px; background-size: 100% 100%">
+    <h3 class="text-white">Гермиона украла у Гарри учебники! Помоги ему найти их!(Всего их 5)</h3>
+    <h1 id="time" class="text-success"><div id="points2"></div> </h1>  
+    <button class="exit-2 bg-success" style="border:none">
+    	Выйти
+    </button>
+    <div class="a6" style="margin-top:500px; margin-left:700px;position:absolute">
+      <img src="1.png" height="20" width="20" alt="">
+    </div>
+    <div class="a7" style="margin-top:850px; position:absolute">
+      <img src="2.png" height="20" width="20" alt="">
+    </div >
+    <div class="a8" style="margin-top:200px; margin-left:500px;position:absolute">
+      <img src="3.png" height="20" width="20" alt="">
+    </div>
+    <div class="a9" style="margin-top:700px; margin-left:550px;position:absolute">
+      <img src="1.png" height="20" width="20" alt="">
+    </div>
+    <div class="a10" style="margin-top:100px; margin-left:1000px;position:absolute">
+      <img src="3.png" height="20" width="20" alt="">
+    </div>
+	</div>
+   <div class="t3" style="background-image: url(bg.jpg); height: 1000px; background-size: 100% 100%">
+    <h3 class="text-white">Рон потярял его шпаргалки 5 на 5 пикселей! Найди их!(их 5)</h3>
+    <h1 id="time" class="text-success"><div id="points3"></div> </h1>  
+    <button class="exit-3 bg-success" style="border:none">
+    	Выйти
+    </button>
+    <div class="a11" style="margin-top:500px; margin-left:700px;position:absolute">
+      <img src="2.png" height="5" width="5" alt="">
+    </div>
+    <div class="a12" style="margin-top:500px; margin-left:700px;position:absolute">
+      <img src="2.png" height="5" width="5" alt="">
+    </div>
+    <div class="a13" style="margin-top:500px; margin-left:700px;position:absolute">
+      <img src="2.png" height="5" width="5" alt="">
+    </div>
+    <div class="a14" style="margin-top:500px; margin-left:700px;position:absolute">
+      <img src="2.png" height="5" width="5" alt="">
+    </div>
+    <div class="a15" style="margin-top:500px; margin-left:700px;position:absolute">
+      <img src="2.png" height="5" width="5" alt="">
+    </div>
+    
+    </div>
+  </div>
+
+   <script type="text/javascript">
+   	let points = 0;
+   	let points2 = 0;
+   	let points3 = 0;
+     document.querySelector('.t1').style.display = 'none';
+     document.querySelector('.t2').style.display = 'none';
+     document.querySelector('.t3').style.display = 'none';
+     document.querySelector('.door3').onclick = function(){
+      alert("Время Экзаменов!");
+      document.querySelector('.door1').style.display = 'none';
+      document.querySelector('.door2').style.display = 'none';
+      document.querySelector('.door3').style.display = 'none';
+      document.querySelector('.t3').style.display = 'block';
+     }
+     document.querySelector('.door2').onclick = function(){
+      alert("Время уроков!");
+      document.querySelector('.door1').style.display = 'none';
+      document.querySelector('.door2').style.display = 'none';
+      document.querySelector('.door3').style.display = 'none';
+      document.querySelector('.t2').style.display = 'block';
+     }
+     document.querySelector('.door1').onclick = function(){
+      alert("Добро пожаловать в Хогвартс!");
+      document.querySelector('.door1').style.display = 'none';
+      document.querySelector('.door2').style.display = 'none';
+      document.querySelector('.door3').style.display = 'none';
+      document.querySelector('.t1').style.display = 'block';
+     }
+     document.querySelector('.exit-1').onclick = function(){
+      document.querySelector('.door1').style.display = 'block';
+      document.querySelector('.door2').style.display = 'block';
+      document.querySelector('.door3').style.display = 'block';
+      document.querySelector('.t1').style.display = 'none';
+      
+     }
+     document.querySelector('.exit-2').onclick = function(){
+      document.querySelector('.door1').style.display = 'block';
+      document.querySelector('.door2').style.display = 'block';
+      document.querySelector('.door3').style.display = 'block';
+      document.querySelector('.t1').style.display = 'none';
+      
+     }
+     document.querySelector('.exit-3').onclick = function(){
+      document.querySelector('.door1').style.display = 'block';
+      document.querySelector('.door2').style.display = 'block';
+      document.querySelector('.door3').style.display = 'block';
+      document.querySelector('.t3').style.display = 'none';
+      
+     }
+     document.querySelector('.a1').onclick = function(){
+      alert("Найдено");
+      document.querySelector('.a1').style.display = 'none';
+      points = points + 1;
+      document.getElementById("points").innerHTML = points;
+     }
+     document.querySelector('.a2').onclick = function(){
+      alert("Найдено");
+      document.querySelector('.a2').style.display = 'none';
+      points = points + 1;
+      document.getElementById("points").innerHTML = points;
+      
+     }
+     document.querySelector('.a3').onclick = function(){
+      alert("Найдено");
+      document.querySelector('.a3').style.display = 'none';
+      points = points + 1;
+      document.getElementById("points").innerHTML = points;
+      
+      }
+     document.querySelector('.a4').onclick = function(){
+      alert("Нет");
+      document.querySelector('.a4').style.display = 'none';
+     
+     }
+     document.querySelector('.a5').onclick = function(){
+      alert("Нет");
+      document.querySelector('.a5').style.display = 'none';
+      
+     }
+     document.querySelector('.a6').onclick = function(){
+      alert("Найдено");
+      document.querySelector('.a6').style.display = 'none';
+      points2 = points2 + 1;
+      document.getElementById("points2").innerHTML = points2;
+      
+      }
+      document.querySelector('.a7').onclick = function(){
+      alert("Найдено");
+      document.querySelector('.a7').style.display = 'none';
+      points2 = points2 + 1;
+      document.getElementById("points2").innerHTML = points2;
+      
+      }
+      document.querySelector('.a8').onclick = function(){
+      alert("Найдено");
+      document.querySelector('.a8').style.display = 'none';
+      points2 = points2 + 1;
+      document.getElementById("points2").innerHTML = points2;
+      
+      }
+      document.querySelector('.a9').onclick = function(){
+      alert("Найдено");
+      document.querySelector('.a9').style.display = 'none';
+      points2 = points2 + 1;
+      document.getElementById("points2").innerHTML = points2;
+      
+      }
+      document.querySelector('.a10').onclick = function(){
+      alert("Найдено");
+      document.querySelector('.a10').style.display = 'none';
+      points2 = points2 + 1;
+      document.getElementById("points2").innerHTML = points2;
+      
+      }
+     
+     document.getElementById("points").innerHTML = points;
+     document.getElementById("points2").innerHTML = points2;
+     document.getElementById("points3").innerHTML = points3;
+
+   </script>
+  </body>
+</html>
